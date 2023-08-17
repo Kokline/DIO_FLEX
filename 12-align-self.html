@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundaments - Align Self</title>
+
+    <style>
+        .flex-container {
+            max-width: 350px;
+            border: 1px solid;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .align-container {
+            align-items: center;
+        }
+
+        .items {
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+
+        .direction {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Align-self: auto / align-items: center</h1>
+    <section class="flex-container align-container">
+        <div class="items auto">AAA</div>
+        <div class="items auto">123</div>
+        <div class="items auto">Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test</div>
+        <div class="items auto">Item 4</div>
+    </section>
+
+    <h1>Align-self - mix</h1>
+    <section class="flex-container">
+        <div class="items center">AAA</div>
+        <div class="items start">123</div>
+        <div class="items stretch">Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test</div>
+        <div class="items end">Item 4</div>
+    </section>
+
+    <h1>Align-self - mix 2</h1>
+    <section class="flex-container">
+        <div class="items center">AAA</div>
+        <div class="items start">AAAaaaaaaaaaaaaaaaaa</div>
+        <div class="items end">AAAaaaaaaaaaaaaaaaaa</div>
+        <div class="items stretch">Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test</div>
+    </section>
+
+    <h1>Align-self: auto / align-items: center (Column)</h1>
+    <section class="flex-container align-container direction">
+        <div class="items auto">AAA</div>
+        <div class="items auto">123</div>
+        <div class="items auto">Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test</div>
+        <div class="items auto">Item 4</div>
+    </section>
+
+    <h1>Align-self - mix (Column)</h1>
+    <section class="flex-container direction">
+        <div class="items center">AAA</div>
+        <div class="items start">123</div>
+        <div class="items stretch">Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test</div>
+        <div class="items end">Item 4</div>
+    </section>
+
+    <h1>Align-self - mix 2 (Column)</h1>
+    <section class="flex-container direction">
+        <div class="items center">AAA</div>
+        <div class="items start">AAAaaaaaaaaaaaaaaaaa</div>
+        <div class="items end">AAAaaaaaaaaaaaaaaaaa</div>
+        <div class="items stretch">Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test</div>
+    </section>
+   
+</body>
+</html>
